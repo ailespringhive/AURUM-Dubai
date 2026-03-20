@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout title="Signature Tours — AURUM Dubai" description="Explore Dubai's finest tours — from full-day city experiences to desert safaris and marina nightlife journeys.">
+
+  <Navbar activePage="tours" />
+
+  <PageHero
+    image="/images/palm-jumeirah.png"
+    alt="Palm Jumeirah aerial"
+    title="Signature Tours"
+    subtitle="Journeys crafted for the world's most discerning travelers"
+  />
+
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Tours' }]} />
+
+  <!-- All Tours -->
+  <section class="tours" style="padding-top:80px;">
+    <div class="container">
+      <!-- Tour 1 -->
+      <div class="tour-block reveal">
+        <div class="tour-img">
+          <img src="/images/palm-jumeirah.png" alt="Palm Jumeirah">
+          <div class="tour-tag">Most Popular</div>
+        </div>
+        <div>
+          <p class="tour-label">⏱ Full Day · 10 Hours</p>
+          <h3 class="tour-name">The Grand Dubai Experience</h3>
+          <p class="tour-desc">An unparalleled full-day journey through Dubai's most iconic landmarks — from the heights of the Burj Khalifa to the tranquil waters of the Palm Jumeirah.</p>
+          <div class="tour-features">
+            <div class="tour-feat"><span class="icon">◆</span> Burj Khalifa VIP</div>
+            <div class="tour-feat"><span class="icon">◆</span> Palm Jumeirah Tour</div>
+            <div class="tour-feat"><span class="icon">◆</span> Private Rolls Royce</div>
+            <div class="tour-feat"><span class="icon">◆</span> Sunset Dhow Cruise</div>
+            <div class="tour-feat"><span class="icon">◆</span> Gourmet Lunch</div>
+            <div class="tour-feat"><span class="icon">◆</span> Photographer</div>
+          </div>
+          <div class="tour-price-row">
+            <span class="tour-price-from">From</span>
+            <span class="tour-price-amount">$1,299</span>
+            <span class="tour-price-per">/ person</span>
+          </div>
+          <a href="/contact" class="btn-primary">Book This Tour →</a>
+        </div>
+      </div>
+
+      <!-- Tour 2 -->
+      <div class="tour-block reversed reveal">
+        <div class="tour-img">
+          <img src="/images/desert-safari.png" alt="Desert safari">
+          <div class="tour-tag">Exclusive</div>
+        </div>
+        <div>
+          <p class="tour-label">⏱ Evening · 6 Hours</p>
+          <h3 class="tour-name">Arabian Nights: Desert Royale</h3>
+          <p class="tour-desc">As the sun descends, your evening unfolds into a sensory masterpiece — private camp, falconry, and a seven-course feast under the stars.</p>
+          <div class="tour-features">
+            <div class="tour-feat"><span class="icon">◆</span> VIP Desert Camp</div>
+            <div class="tour-feat"><span class="icon">◆</span> Dune Bashing</div>
+            <div class="tour-feat"><span class="icon">◆</span> Live Falconry</div>
+            <div class="tour-feat"><span class="icon">◆</span> 7-Course Dinner</div>
+            <div class="tour-feat"><span class="icon">◆</span> Camel Ride</div>
+            <div class="tour-feat"><span class="icon">◆</span> Entertainment</div>
+          </div>
+          <div class="tour-price-row">
+            <span class="tour-price-from">From</span>
+            <span class="tour-price-amount">$899</span>
+            <span class="tour-price-per">/ person</span>
+          </div>
+          <a href="/contact" class="btn-primary">Book This Tour →</a>
+        </div>
+      </div>
+
+      <!-- Tour 3 -->
+      <div class="tour-block reveal">
+        <div class="tour-img">
+          <img src="/images/dubai-marina.png" alt="Dubai Marina">
+          <div class="tour-tag">New</div>
+        </div>
+        <div>
+          <p class="tour-label">⏱ Half Day · 5 Hours</p>
+          <h3 class="tour-name">Marina & Skyline by Night</h3>
+          <p class="tour-desc">Discover Dubai's electric nightlife — from the glittering Marina to exclusive rooftop cocktails with 360° views.</p>
+          <div class="tour-features">
+            <div class="tour-feat"><span class="icon">◆</span> Marina Walk</div>
+            <div class="tour-feat"><span class="icon">◆</span> Rooftop Cocktails</div>
+            <div class="tour-feat"><span class="icon">◆</span> Fountain Show</div>
+            <div class="tour-feat"><span class="icon">◆</span> Dinner Cruise</div>
+            <div class="tour-feat"><span class="icon">◆</span> Night Photos</div>
+            <div class="tour-feat"><span class="icon">◆</span> VIP Transfers</div>
+          </div>
+          <div class="tour-price-row">
+            <span class="tour-price-from">From</span>
+            <span class="tour-price-amount">$749</span>
+            <span class="tour-price-per">/ person</span>
+          </div>
+          <a href="/contact" class="btn-primary">Book This Tour →</a>
+        </div>
+      </div>
+
+      <!-- Tour 4 -->
+      <div class="tour-block reversed reveal">
+        <div class="tour-img">
+          <img src="/images/dubai-mall.png" alt="Dubai Mall">
+          <div class="tour-tag">Family</div>
+        </div>
+        <div>
+          <p class="tour-label">⏱ Full Day · 8 Hours</p>
+          <h3 class="tour-name">Dubai Shopping & Culture</h3>
+          <p class="tour-desc">Explore the world's largest mall, stroll through the historic Gold Souk, and experience Dubai's vibrant cultural scene.</p>
+          <div class="tour-features">
+            <div class="tour-feat"><span class="icon">◆</span> Dubai Mall Tour</div>
+            <div class="tour-feat"><span class="icon">◆</span> Gold & Spice Souk</div>
+            <div class="tour-feat"><span class="icon">◆</span> Aquarium Visit</div>
+            <div class="tour-feat"><span class="icon">◆</span> Private Guide</div>
+            <div class="tour-feat"><span class="icon">◆</span> Lunch Included</div>
+            <div class="tour-feat"><span class="icon">◆</span> Hotel Pickup</div>
+          </div>
+          <div class="tour-price-row">
+            <span class="tour-price-from">From</span>
+            <span class="tour-price-amount">$599</span>
+            <span class="tour-price-per">/ person</span>
+          </div>
+          <a href="/contact" class="btn-primary">Book This Tour →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-bg"><img src="/images/dubai-fountain.png" alt="Dubai Fountain"></div>
+    <div class="cta-overlay"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2 class="cta-title">Can't Decide? Let Us Help</h2>
+        <p class="cta-text">Our concierge team will craft a personalized itinerary just for you.</p>
+        <div style="text-align:center"><a href="/contact" class="btn-primary">Contact Us →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <BackToTop />
+
+</BaseLayout>

@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout title="Luxury Packages — AURUM Dubai" description="Choose your level of luxury — Gold, Platinum, or Diamond packages for the ultimate Dubai experience.">
+
+  <Navbar activePage="packages" />
+
+  <PageHero
+    image="/images/burj-al-arab.png"
+    alt="Burj Al Arab luxury"
+    title="Luxury Packages"
+    subtitle="Three tiers of opulence for the ultimate Dubai experience"
+  />
+
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Packages' }]} />
+
+  <section class="packages" style="margin-top:0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline" style="color:var(--gold-light)">Exclusive Packages</p>
+        <h2 class="section-title light">Choose Your Level of Luxury</h2>
+        <p class="section-subtitle light">Every package includes airport VIP transfers, 24/7 concierge support, and a dedicated travel coordinator.</p>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-card reveal">
+          <div class="pkg-icon">✦</div>
+          <h3 class="pkg-name">Gold</h3>
+          <p class="pkg-tagline">A Luxurious Introduction</p>
+          <div class="pkg-price"><span class="pkg-currency">$</span><span class="pkg-amount">2,499</span><span class="pkg-per">/ 3 nights</span></div>
+          <div class="pkg-features">
+            <div class="pkg-feat"><span class="icon">◆</span> 5-Star Hotel</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Airport VIP Transfer</div>
+            <div class="pkg-feat"><span class="icon">◆</span> City Tour with Guide</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Desert Safari Evening</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Dubai Mall & Fountain</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Daily Breakfast</div>
+          </div>
+          <a href="/contact" class="pkg-btn">Select Package</a>
+        </div>
+        <div class="pkg-card featured reveal">
+          <div class="pkg-badge">Best Value</div>
+          <div class="pkg-icon">👑</div>
+          <h3 class="pkg-name">Platinum</h3>
+          <p class="pkg-tagline">The Ultimate Indulgence</p>
+          <div class="pkg-price"><span class="pkg-currency">$</span><span class="pkg-amount">5,999</span><span class="pkg-per">/ 5 nights</span></div>
+          <div class="pkg-features">
+            <div class="pkg-feat"><span class="icon">◆</span> 7-Star Hotel Suite</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Rolls Royce Transfers</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Helicopter City Tour</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Private Yacht Cruise</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Royal Desert Camp</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Michelin Dinners × 3</div>
+            <div class="pkg-feat"><span class="icon">◆</span> 24/7 Concierge</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Spa Treatment</div>
+          </div>
+          <a href="/contact" class="pkg-btn">Select Package</a>
+        </div>
+        <div class="pkg-card reveal">
+          <div class="pkg-icon">💎</div>
+          <h3 class="pkg-name">Diamond</h3>
+          <p class="pkg-tagline">Beyond Extraordinary</p>
+          <div class="pkg-price"><span class="pkg-currency">$</span><span class="pkg-amount">12,999</span><span class="pkg-per">/ 7 nights</span></div>
+          <div class="pkg-features">
+            <div class="pkg-feat"><span class="icon">◆</span> Burj Al Arab Suite</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Private Jet Transfer</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Bespoke Itinerary</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Supercar Fleet</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Private Island Trip</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Butler & Private Chef</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Unlimited Spa Access</div>
+            <div class="pkg-feat"><span class="icon">◆</span> Personal Photographer</div>
+          </div>
+          <a href="/contact" class="pkg-btn">Select Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonial-box reveal">
+        <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-quote">"The Platinum package exceeded every expectation. From the helicopter tour to the yacht cruise, every moment was flawless."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JR</div>
+          <div><div class="testimonial-name">James Richardson</div><div class="testimonial-from">London, UK</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <BackToTop />
+
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  activePage?: string;
+}
+const { activePage = '' } = Astro.props;
+---
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="/" class="nav-brand">Aurum</a>
+    <div class="nav-links">
+      <a href="/experiences" class:list={["nav-link", { active: activePage === 'experiences' }]}>Experiences</a>
+      <a href="/tours" class:list={["nav-link", { active: activePage === 'tours' }]}>Tours</a>
+      <a href="/gallery" class:list={["nav-link", { active: activePage === 'gallery' }]}>Gallery</a>
+      <a href="/packages" class:list={["nav-link", { active: activePage === 'packages' }]}>Packages</a>
+      <a href="/reviews" class:list={["nav-link", { active: activePage === 'reviews' }]}>Reviews</a>
+      <a href="/contact" class:list={["nav-cta", { 'active-cta': activePage === 'contact' }]} style={activePage === 'contact' ? 'background:var(--primary-dark)' : ''}>Book Now</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/experiences" class:list={["nav-link", { active: activePage === 'experiences' }]}>Experiences</a>
+  <a href="/tours" class:list={["nav-link", { active: activePage === 'tours' }]}>Tours</a>
+  <a href="/gallery" class:list={["nav-link", { active: activePage === 'gallery' }]}>Gallery</a>
+  <a href="/packages" class:list={["nav-link", { active: activePage === 'packages' }]}>Packages</a>
+  <a href="/reviews" class:list={["nav-link", { active: activePage === 'reviews' }]}>Reviews</a>
+  <a href="/contact" class="nav-cta" style="margin-top:8px">Book Now</a>
+</div>

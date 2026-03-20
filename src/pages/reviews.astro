@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout title="Guest Reviews — AURUM Dubai" description="Read what our travelers say about their luxury Dubai experiences with Aurum.">
+
+  <Navbar activePage="reviews" />
+
+  <PageHero
+    image="/images/dubai-fountain.png"
+    alt="Dubai Fountain"
+    title="Guest Reviews"
+    subtitle="Stories from travelers who chose the extraordinary"
+  />
+
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Reviews' }]} />
+
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">Traveler Stories</p>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-subtitle">Every review is a testament to our commitment to excellence.</p>
+      </div>
+      <div class="review-grid">
+        <div class="review-card reveal">
+          <div class="review-card-stars">★ ★ ★ ★ ★</div>
+          <p class="review-card-text">"Aurum Dubai crafted the most magical holiday our family has ever experienced. Every detail was perfect — from the private yacht to the desert camp under the stars."</p>
+          <div class="review-card-author">
+            <div class="review-card-avatar">SA</div>
+            <div><div class="review-card-name">Sofia Andersson</div><div class="review-card-from">Stockholm, Sweden</div></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card-stars">★ ★ ★ ★ ★</div>
+          <p class="review-card-text">"The helicopter tour over the Palm was breathtaking, and the private dinner at the Burj Al Arab was unforgettable. Aurum creates dreams."</p>
+          <div class="review-card-author">
+            <div class="review-card-avatar">JR</div>
+            <div><div class="review-card-name">James Richardson</div><div class="review-card-from">London, UK</div></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card-stars">★ ★ ★ ★ ★</div>
+          <p class="review-card-text">"Every second was curated to perfection. The desert camp under a billion stars, the yacht cruise — it was like living inside a movie."</p>
+          <div class="review-card-author">
+            <div class="review-card-avatar">YT</div>
+            <div><div class="review-card-name">Yuki Tanaka</div><div class="review-card-from">Tokyo, Japan</div></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card-stars">★ ★ ★ ★ ★</div>
+          <p class="review-card-text">"Their attention to detail made our anniversary trip the most beautiful chapter of our story. Aurum stands alone in luxury travel."</p>
+          <div class="review-card-author">
+            <div class="review-card-avatar">IR</div>
+            <div><div class="review-card-name">Isabella & Marco Rossi</div><div class="review-card-from">Milan, Italy</div></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card-stars">★ ★ ★ ★ ★</div>
+          <p class="review-card-text">"We chose the Diamond package and every moment felt like royalty. The private island day trip and the Burj Al Arab suite were beyond imagination."</p>
+          <div class="review-card-author">
+            <div class="review-card-avatar">AK</div>
+            <div><div class="review-card-name">Anya Kowalski</div><div class="review-card-from">Warsaw, Poland</div></div>
+          </div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-card-stars">★ ★ ★ ★ ★</div>
+          <p class="review-card-text">"The Gold package was incredible value. Our guide knew every hidden gem, and the desert safari was a once-in-a-lifetime experience."</p>
+          <div class="review-card-author">
+            <div class="review-card-avatar">DM</div>
+            <div><div class="review-card-name">David & Maria Chen</div><div class="review-card-from">Sydney, Australia</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-num">4.9/5</div><div class="stat-label">Average Rating</div></div>
+        <div class="stat-item"><div class="stat-num">2,500+</div><div class="stat-label">Happy Travelers</div></div>
+        <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Would Recommend</div></div>
+        <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">5-Star Reviews</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta">
+    <div class="cta-bg"><img src="/images/dubai-hero.png" alt="Dubai skyline"></div>
+    <div class="cta-overlay"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2 class="cta-title">Ready to Write Your Own Story?</h2>
+        <p class="cta-text">Join thousands of satisfied travelers who have discovered the magic of Dubai with Aurum.</p>
+        <div style="text-align:center"><a href="/contact" class="btn-primary" style="background:var(--gold)">Book Your Journey →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <BackToTop />
+
+</BaseLayout>

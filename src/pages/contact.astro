@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout title="Contact & Booking — AURUM Dubai" description="Book your luxury Dubai tour or get in touch with our concierge team.">
+
+  <Navbar activePage="contact" />
+
+  <PageHero
+    image="/images/dubai-marina.png"
+    alt="Dubai Marina"
+    title="Book Your Journey"
+    subtitle="Let us craft your perfect Dubai experience"
+  />
+
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact & Booking' }]} />
+
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">Get in Touch</p>
+        <h2 class="section-title">Start Your Dubai Story</h2>
+        <p class="section-subtitle">Fill out the form below and our concierge team will get back to you within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="reveal">
+          <div class="contact-info-item">
+            <div class="contact-icon-box">📍</div>
+            <div>
+              <div class="contact-info-label">Visit Us</div>
+              <div class="contact-info-value">Suite 4200, Burj Khalifa Blvd<br>Downtown Dubai, United Arab Emirates</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-box">📞</div>
+            <div>
+              <div class="contact-info-label">Call Us</div>
+              <div class="contact-info-value">+971 4 888 8888<br>Available 24/7</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-box">✉️</div>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+              <div class="contact-info-value">concierge@aurumdubai.com<br>booking@aurumdubai.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-box">🕐</div>
+            <div>
+              <div class="contact-info-label">Office Hours</div>
+              <div class="contact-info-value">Sunday – Thursday: 9 AM – 8 PM<br>Friday – Saturday: 10 AM – 6 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Thank you! Our concierge will contact you shortly.');">
+          <div class="form-row">
+            <input type="text" class="form-input" placeholder="First Name *" required>
+            <input type="text" class="form-input" placeholder="Last Name *" required>
+          </div>
+          <input type="email" class="form-input" placeholder="Email Address *" required>
+          <input type="tel" class="form-input" placeholder="Phone Number">
+          <div class="form-row">
+            <select class="form-input" required>
+              <option value="" disabled selected>Select Package</option>
+              <option>Gold Package — $2,499</option>
+              <option>Platinum Package — $5,999</option>
+              <option>Diamond Package — $12,999</option>
+              <option>Custom Package</option>
+            </select>
+            <input type="date" class="form-input" placeholder="Preferred Travel Date">
+          </div>
+          <input type="number" class="form-input" placeholder="Number of Travelers" min="1" max="20">
+          <textarea class="form-textarea" placeholder="Tell us about your dream Dubai experience — special requests, occasions, preferences..."></textarea>
+          <button type="submit" class="form-submit">Send Inquiry →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map placeholder -->
+  <section class="page-section alt" style="padding:60px 0;">
+    <div class="container" style="text-align:center;">
+      <div style="background:var(--gray-200); border-radius:8px; height:350px; display:flex; align-items:center; justify-content:center; color:var(--gray-500); font-size:1.1rem;">
+        <div>
+          <p style="font-size:2rem; margin-bottom:10px;">📍</p>
+          <p style="font-family:var(--font-display); font-size:1.3rem; font-weight:600; color:var(--gray-800); margin-bottom:6px;">Suite 4200, Burj Khalifa Blvd</p>
+          <p>Downtown Dubai, United Arab Emirates</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <BackToTop />
+
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  title: string;
+  subtitle: string;
+}
+const { image, alt, title, subtitle } = Astro.props;
+---
+
+<section class="page-hero">
+  <img src={image} alt={alt}>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <h1 class="page-hero-title">{title}</h1>
+    <p class="page-hero-sub">{subtitle}</p>
+  </div>
+</section>

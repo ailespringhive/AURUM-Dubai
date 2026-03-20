@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import PageHero from '../components/PageHero.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout title="Gallery — AURUM Dubai" description="Explore stunning visuals of Dubai — from the iconic skyline to the golden desert and luxury experiences.">
+
+  <Navbar activePage="gallery" />
+
+  <PageHero
+    image="/images/dubai-hero.png"
+    alt="Dubai skyline"
+    title="Photo Gallery"
+    subtitle="Captured moments of grandeur from the world's most extraordinary city"
+  />
+
+  <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]} />
+
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">Visual Journey</p>
+        <h2 class="section-title">Dubai Through Our Lens</h2>
+        <p class="section-subtitle">Every photograph tells a story of luxury, beauty, and wonder.</p>
+      </div>
+      <div class="gallery-page-grid">
+        <div class="gallery-page-item tall reveal">
+          <img src="/images/dubai-hero.png" alt="Dubai skyline at golden hour">
+          <div class="gallery-page-caption">The Dubai Skyline</div>
+        </div>
+        <div class="gallery-page-item reveal">
+          <img src="/images/burj-al-arab.png" alt="Burj Al Arab">
+          <div class="gallery-page-caption">Burj Al Arab</div>
+        </div>
+        <div class="gallery-page-item reveal">
+          <img src="/images/palm-jumeirah.png" alt="Palm Jumeirah">
+          <div class="gallery-page-caption">Palm Jumeirah</div>
+        </div>
+        <div class="gallery-page-item reveal">
+          <img src="/images/dubai-fountain.png" alt="Dubai Fountain">
+          <div class="gallery-page-caption">The Fountain Show</div>
+        </div>
+        <div class="gallery-page-item reveal">
+          <img src="/images/dubai-mall.png" alt="Dubai Mall">
+          <div class="gallery-page-caption">Dubai Mall Aquarium</div>
+        </div>
+        <div class="gallery-page-item tall reveal">
+          <img src="/images/desert-safari.png" alt="Desert safari">
+          <div class="gallery-page-caption">Golden Desert</div>
+        </div>
+        <div class="gallery-page-item reveal">
+          <img src="/images/luxury-dining.png" alt="Luxury dining">
+          <div class="gallery-page-caption">Fine Dining</div>
+        </div>
+        <div class="gallery-page-item reveal">
+          <img src="/images/dubai-marina.png" alt="Dubai Marina">
+          <div class="gallery-page-caption">Marina at Night</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <BackToTop />
+
+</BaseLayout>

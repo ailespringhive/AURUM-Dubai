@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxury Experiences — AURUM Dubai</title>
-  <meta name="description" content="Discover Dubai's most exclusive luxury experiences — desert safaris, yacht cruises, helicopter tours, and Michelin dining.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=6">
-  <style>
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<BaseLayout title="Luxury Experiences — AURUM Dubai" description="Discover Dubai's most exclusive luxury experiences — desert safaris, yacht cruises, helicopter tours, and Michelin dining.">
+
+  <style slot="head" is:inline>
     /* === LUXURY EXPERIENCES PAGE === */
 
     .exp-hero {
@@ -361,35 +358,12 @@
       .lux-card-img { height: 240px; }
     }
   </style>
-</head>
-<body>
 
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-brand">Aurum</a>
-      <div class="nav-links">
-        <a href="experiences.html" class="nav-link active">Experiences</a>
-        <a href="tours.html" class="nav-link">Tours</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="packages.html" class="nav-link">Packages</a>
-        <a href="reviews.html" class="nav-link">Reviews</a>
-        <a href="contact.html" class="nav-cta">Book Now</a>
-      </div>
-      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="experiences.html" class="nav-link active">Experiences</a>
-    <a href="tours.html" class="nav-link">Tours</a>
-    <a href="gallery.html" class="nav-link">Gallery</a>
-    <a href="packages.html" class="nav-link">Packages</a>
-    <a href="reviews.html" class="nav-link">Reviews</a>
-    <a href="contact.html" class="nav-cta" style="margin-top:8px">Book Now</a>
-  </div>
+  <Navbar activePage="experiences" />
 
   <!-- Luxury Hero -->
   <section class="exp-hero">
-    <img src="images/luxury-dining.png" alt="Luxury fine dining in Dubai">
+    <img src="/images/luxury-dining.png" alt="Luxury fine dining in Dubai">
     <div class="exp-hero-overlay"></div>
     <div class="exp-hero-content">
       <p class="exp-hero-eyebrow">◆ &nbsp; A U R U M &nbsp; C O L L E C T I O N &nbsp; ◆</p>
@@ -417,7 +391,7 @@
         <!-- Card 1 -->
         <div class="lux-card reveal">
           <div class="lux-card-img">
-            <img src="images/desert-safari.png" alt="Royal Desert Safari">
+            <img src="/images/desert-safari.png" alt="Royal Desert Safari">
             <div class="lux-card-img-overlay"></div>
             <div class="lux-card-tag">Signature</div>
           </div>
@@ -444,7 +418,7 @@
         <!-- Card 2 -->
         <div class="lux-card reveal">
           <div class="lux-card-img">
-            <img src="images/dubai-marina.png" alt="Private Yacht Cruise">
+            <img src="/images/dubai-marina.png" alt="Private Yacht Cruise">
             <div class="lux-card-img-overlay"></div>
             <div class="lux-card-tag">Exclusive</div>
           </div>
@@ -471,7 +445,7 @@
         <!-- Card 3 -->
         <div class="lux-card reveal">
           <div class="lux-card-img">
-            <img src="images/luxury-dining.png" alt="Michelin Star Dining">
+            <img src="/images/luxury-dining.png" alt="Michelin Star Dining">
             <div class="lux-card-img-overlay"></div>
             <div class="lux-card-tag">Curated</div>
           </div>
@@ -498,7 +472,7 @@
         <!-- Card 4 -->
         <div class="lux-card reveal">
           <div class="lux-card-img">
-            <img src="images/palm-jumeirah.png" alt="Helicopter City Tour">
+            <img src="/images/palm-jumeirah.png" alt="Helicopter City Tour">
             <div class="lux-card-img-overlay"></div>
             <div class="lux-card-tag">Premium</div>
           </div>
@@ -525,7 +499,7 @@
         <!-- Card 5 -->
         <div class="lux-card reveal">
           <div class="lux-card-img">
-            <img src="images/dubai-fountain.png" alt="Dubai by Night">
+            <img src="/images/dubai-fountain.png" alt="Dubai by Night">
             <div class="lux-card-img-overlay"></div>
             <div class="lux-card-tag">Nightlife</div>
           </div>
@@ -552,7 +526,7 @@
         <!-- Card 6 -->
         <div class="lux-card reveal">
           <div class="lux-card-img">
-            <img src="images/burj-al-arab.png" alt="Luxury Spa & Wellness">
+            <img src="/images/burj-al-arab.png" alt="Luxury Spa & Wellness">
             <div class="lux-card-img-overlay"></div>
             <div class="lux-card-tag">Wellness</div>
           </div>
@@ -581,38 +555,19 @@
 
   <!-- Luxury CTA -->
   <section class="lux-cta">
-    <div class="lux-cta-bg"><img src="images/dubai-fountain.png" alt="Dubai at night"></div>
+    <div class="lux-cta-bg"><img src="/images/dubai-fountain.png" alt="Dubai at night"></div>
     <div class="lux-cta-overlay"></div>
     <div class="container">
       <div class="lux-cta-inner reveal">
         <p class="lux-cta-eyebrow">◆ &nbsp; Begin Your Story &nbsp; ◆</p>
         <h2 class="lux-cta-title">Every Experience Begins with a Conversation</h2>
         <p class="lux-cta-text">"Let our concierge team craft a bespoke journey tailored to your desires. No detail is too small, no request too grand."</p>
-        <a href="contact.html" class="lux-cta-btn">Book an Experience →</a>
+        <a href="/contact" class="lux-cta-btn">Book an Experience →</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div><div class="footer-brand">Aurum Dubai</div><p class="footer-brand-text">The premier luxury travel concierge in Dubai.</p><div class="footer-social"><a href="#" class="social-link">IG</a><a href="#" class="social-link">FB</a><a href="#" class="social-link">TW</a><a href="#" class="social-link">YT</a></div></div>
-        <div><h4 class="footer-heading">Quick Links</h4><div class="footer-links"><a href="index.html" class="footer-link">Home</a><a href="experiences.html" class="footer-link">Experiences</a><a href="tours.html" class="footer-link">Tours</a><a href="packages.html" class="footer-link">Packages</a></div></div>
-        <div><h4 class="footer-heading">Destinations</h4><div class="footer-links"><a href="tours.html" class="footer-link">Burj Khalifa</a><a href="tours.html" class="footer-link">Palm Jumeirah</a><a href="tours.html" class="footer-link">Dubai Marina</a><a href="tours.html" class="footer-link">Desert Safari</a></div></div>
-        <div><h4 class="footer-heading">Contact Us</h4><div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>Suite 4200, Downtown Dubai</span></div><div class="footer-contact-item"><span class="footer-contact-icon">📞</span><span>+971 4 888 8888</span></div><div class="footer-contact-item"><span class="footer-contact-icon">✉️</span><span>concierge@aurumdubai.com</span></div></div>
-      </div>
-      <div class="footer-bottom"><p class="footer-copy">© 2026 Aurum Dubai. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
-    </div>
-  </footer>
-  <button class="back-to-top" id="backToTop">↑</button>
-  <script>
-    window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50); document.getElementById('backToTop').classList.toggle('visible', scrollY > 500); });
-    const hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); mobileMenu.classList.toggle('active'); });
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { hamburger.classList.remove('active'); mobileMenu.classList.remove('active'); }));
-    document.querySelectorAll('.reveal').forEach(el => new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 }).observe(el));
-    document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
-</body>
-</html>
+  <Footer />
+  <BackToTop />
+
+</BaseLayout>

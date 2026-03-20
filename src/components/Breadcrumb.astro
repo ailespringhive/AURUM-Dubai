@@ -1,0 +1,21 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+interface Props {
+  items: BreadcrumbItem[];
+}
+const { items } = Astro.props;
+---
+
+<div class="breadcrumb">
+  <div class="container breadcrumb-inner">
+    {items.map((item, i) => (
+      <>
+        {i > 0 && <span class="breadcrumb-sep">›</span>}
+        {item.href ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
+      </>
+    ))}
+  </div>
+</div>
